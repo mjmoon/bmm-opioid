@@ -19,19 +19,19 @@ white_path <- file.path(us_path, "white")
 
 _Updated: `r Sys.Date()`._
 
-  
+
 ## Model
 
-$$\left(x_i \left| \left\{ \mathbf{r}_i, \mathbf{p}_i\right\}, u_i\right.\right)
-\sim {\rm Poisson}\left(\Lambda_{i,4}\left|\left\{\mathbf{r}_i,\mathbf{p}_i, u_i\right\}\right.\right)$$
+$$\left(x_i \left| \{ \mathbf{r}_i, \mathbf{p}_i\}, u_i\right.\right)
+\sim {\rm Poisson}\left(\Lambda_{i,4}\left|\{\mathbf{r}_i,\mathbf{p}_i, u_i\}\right.\right)$$
 
-$$\left(y_i \left| \left\{ \mathbf{r}_i, \mathbf{p}_i\right\}, u_i\right.\right)
-\sim {\rm Poisson}\left(\Lambda_{i,3}\left|\left\{\mathbf{r}_i,\mathbf{p}_i, u_i\right\}\right.\right)$$
+$$\left(y_i \left| \{ \mathbf{r}_i, \mathbf{p}_i\}, u_i\right.\right)
+\sim {\rm Poisson}\left(\Lambda_{i,3}\left|\{\mathbf{r}_i,\mathbf{p}_i, u_i\}\right.\right)$$
 
-$$\left(w_i^{(\rm{obs})} \left| \left\{ \mathbf{r}_i, p_i^{(1)}, u_i\right\} \right.\right)
+$$\left(w_i^{(\rm{obs})} \left| \{ \mathbf{r}_i, p_i^{(1)}, u_i\} \right.\right)
 \sim {\rm Poisson}\left(w_{i}\right)$$
 
-where $w_{i}= p_{i}^{(1)}\cdot \sum_{j=1}^{i-1} \left\{r_{j}^{(1)} \cdot \left(1 - u_{j}\right)\right\} + r_i^{(2)}$ and $w_{i}^{({\rm obs})} = p_{i}^{(1, {\rm obs})}\cdot\sum_{j=1}^{i-1} \left\{r_{j}^{(1,{\rm obs})} \cdot \left(1 - u_{j}\right)\right\} + r_i^{(2, {\rm obs})}$
+where $w_{i}= p_{i}^{(1)}\cdot \sum_{j=1}^{i-1} \{r_{j}^{(1)} \cdot \left(1 - u_{j}\right)\} + r_i^{(2)}$ and $w_{i}^{({\rm obs})} = p_{i}^{(1, {\rm obs})}\cdot\sum_{j=1}^{i-1} \{r_{j}^{(1,{\rm obs})} \cdot \left(1 - u_{j}\right)\} + r_i^{(2, {\rm obs})}$
 
 ## Priors
 
