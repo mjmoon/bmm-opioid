@@ -1,0 +1,161 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+sim_path <- ifelse(grepl("results", getwd()), 
+                   file.path("."), 
+                   file.path("results", "sim"))
+fit_no_ratio_path <- file.path(sim_path, "no-ratio-estimate")
+fit_ratio_path <- file.path(sim_path, "ratio-estimate")
+render_images <- function(path, plots) {
+  paths <- file.path(path, plots)
+  paste0('<a href="', paths, '">', 
+         pander::pandoc.image.return(paths),
+         '</a>')
+}
+```
+
+_Updated: `r Sys.Date()`._
+
+## Simulation parameters
+
+```{r}
+load(file.path(
+  ifelse(grepl("results", getwd()),
+         file.path("..", ".."),
+         file.path(".")),
+  "data", "sim", "params.RData"
+))
+knitr::kable(
+  cbind(
+    c("n", "$r_0^{\\rm TRUE}$", "$p_0^{\\rm TRUE}$", "$\\sigma_\\gamma^{\\rm TRUE}$", "$\\sigma_\\delta^{\\rm TRUE}$", "u"),
+    c(n, paste(r0, collapse = ", "), paste(p0, collapse = ", "),
+      siggamma, sigdelta, u)
+  ),
+  escape = FALSE,
+  col.names = c("Parameter", "Value")
+)
+```
+
+## Simulated data
+
+### Incidences
+
+```{r}
+sim_plots <- dir(sim_path)[grep(".png", dir(sim_path))]
+sim_r_plots <- sim_plots[grepl("^r\\d", sim_plots)]
+knitr::kable(
+  t(render_images(sim_path, sim_r_plots)), 
+  col.names = c("r1", "r2")
+)
+```
+
+### Transition probabilities
+
+```{r}
+sim_p_plots <- sim_plots[grepl("^p\\d", sim_plots)]
+knitr::kable(
+  t(render_images(sim_path, sim_p_plots)), 
+  col.names = c("p1", "p2", "p3")
+)
+```
+
+## Observed counts
+
+```{r}
+sim_wxy_plots <- sim_plots[grepl("[a-z]\\.", sim_plots)][c(1,3,2)]
+knitr::kable(
+  t(render_images(sim_path, sim_wxy_plots)), 
+  col.names = c("W", "Y", "X")
+)
+```
+
+## Fitting with matching priors
+
+### Priors
+
++  Normal for $\gamma_0 =\log\left(r_0\right)$ such that their means are $\log\left(r_0^{\rm TRUE}\right)$ with standard deviations following a half normal distribution with $\sigma=1$.
++  Normal for $\delta_0 ={\rm logit}\left(p_0\right)$ such that their means are ${\rm logit}\left(p_0^{\rm TRUE}\right)$ with standard deviations following a half normal distribution with $\sigma=1$.
+
+
+### Results
+
+### Incidences
+
++  Curves on the left margin indicate prior distributions where available.
++  Connected solid diamonds indicate posterior medians with 80% and 95% credible intervals indicated with vertical lines.
++  White diamonds indicate the simulated true values.
+
+```{r}
+fit_no_ratio_plots <- dir(fit_no_ratio_path)[grep(
+  ".png", dir(fit_no_ratio_path))]
+fit_ratio_plots <- dir(fit_ratio_path)[grep(
+  ".png", dir(fit_ratio_path))]
+fit_no_ratio_r_plots <- fit_no_ratio_plots[grepl(
+  "^01-.+r\\d.png", fit_no_ratio_plots)]
+fit_ratio_r_plots <- fit_ratio_plots[grepl(
+  "^01-.+r\\d.png", fit_ratio_plots)]
+knitr::kable(
+  rbind(
+    `Without ratio estimates` = render_images(
+      fit_no_ratio_path, fit_no_ratio_r_plots),
+    `With ratio estimates` = render_images(
+      fit_ratio_path, fit_ratio_r_plots)
+  ), 
+  col.names = c("r1", "r2"),
+  row.names = TRUE
+)
+```
+
+### Transition probabilities
+
++  Curves on the left margin indicate prior distributions where available.
++  Connected solid diamonds indicate posterior medians with 80% and 95% credible intervals indicated with vertical lines.
++  White diamonds indicate the simulated true values.
++  Grey diamonds indicate the simulated ratio estimates.
+
+```{r}
+fit_no_ratio_p_plots <- fit_no_ratio_plots[grepl(
+  "^01-.+p\\d.png", fit_no_ratio_plots)]
+fit_ratio_p_plots <- fit_ratio_plots[grepl(
+  "^01-.+p\\d.png", fit_ratio_plots)]
+knitr::kable(
+  rbind(
+    `Without ratio estimates` = render_images(
+      fit_no_ratio_path, fit_no_ratio_p_plots),
+    `With ratio estimates` = render_images(
+      fit_ratio_path, fit_ratio_p_plots)
+  ), 
+  col.names = c("p1", "p2", "p3"),
+  row.names = TRUE
+)
+```
+
+### Observed counts
+
++  Connected solid diamonds indicate posterior medians with 80% and 95% credible intervals indicated with vertical lines for the means.
++  White diamonds indicate the simulated observed counts.
+
+```{r}
+fit_no_ratio_wxy_plots <- fit_no_ratio_plots[grepl(
+  "^01-.+[w|x|y|].png", fit_no_ratio_plots)][c(1, 3, 2)]
+fit_ratio_wxy_plots <- fit_ratio_plots[grepl(
+  "^01-.+[w|x|y].png", fit_ratio_plots)][c(1, 3, 2)]
+knitr::kable(
+  rbind(
+    `Without ratio estimates` = render_images(
+      fit_no_ratio_path, fit_no_ratio_wxy_plots),
+    `With ratio estimates` = render_images(
+      fit_ratio_path, fit_ratio_wxy_plots)
+  ), 
+  col.names = c("W", "Y", "X"),
+  row.names = TRUE
+)
+```
+
+## Diagnostic plots
+
+Several diagnostic plots are available in subdirectories for [the model without ratio estimates](no-ratio-estimate/) and [the model with ratio estimates](ratio-estimate/).

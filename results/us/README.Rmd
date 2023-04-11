@@ -1,0 +1,170 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+render_images <- function(path, plots) {
+  paths <- file.path(path, plots)
+  paste0('<a href="', paths, '">', 
+         pander::pandoc.image.return(paths),
+         '</a>')
+}
+us_path <- ifelse(grepl("results", getwd()), 
+                   file.path("."), 
+                   file.path("results", "us"))
+black_path <- file.path(us_path, "black")
+white_path <- file.path(us_path, "white")
+```
+
+_Updated: `r Sys.Date()`._
+
+  
+## Model
+
+$$\left(x_i \left| \left\{ \mathbf{r}_i, \mathbf{p}_i\right\}, u_i\right.\right)
+\sim {\rm Poisson}\left(\Lambda_{i,4}\left|\left\{\mathbf{r}_i,\mathbf{p}_i, u_i\right\}\right.\right)$$
+
+$$\left(y_i \left| \left\{ \mathbf{r}_i, \mathbf{p}_i\right\}, u_i\right.\right)
+\sim {\rm Poisson}\left(\Lambda_{i,3}\left|\left\{\mathbf{r}_i,\mathbf{p}_i, u_i\right\}\right.\right)$$
+
+$$\left(w_i^{(\rm{obs})} \left| \left\{ \mathbf{r}_i, p_i^{(1)}, u_i\right\} \right.\right)
+\sim {\rm Poisson}\left(w_{i}\right)$$
+
+where $w_{i}= p_{i}^{(1)}\cdot \sum_{j=1}^{i-1} \left\{r_{j}^{(1)} \cdot \left(1 - u_{j}\right)\right\} + r_i^{(2)}$ and $w_{i}^{({\rm obs})} = p_{i}^{(1, {\rm obs})}\cdot\sum_{j=1}^{i-1} \left\{r_{j}^{(1,{\rm obs})} \cdot \left(1 - u_{j}\right)\right\} + r_i^{(2, {\rm obs})}$
+
+## Priors
+
+$$\delta_i^{(1)}\sim N\left(\delta_{i-1}^{(1)}, \sigma_\delta^2\right),$$
+$$\delta_i^{(2)}\sim N\left(\delta_{i-1}^{(2)}, \sigma_\delta^2\right),$$ 
+and
+$$\delta_i^{(3)}\sim N\left(\delta_{i-1}^{(3)}, \sigma_\delta^2\right)$$ 
+
+where $\delta_0^{(1)}=\rm{logit}\left(0.015\right)$, $\delta_0^{(2)}=\rm{logit}\left(0.01\right)$, $\delta_0^{(1)}=\rm{logit}\left(0.0005\right)$, 
+and $\sigma_\delta=\lvert\sigma_\delta'\rvert$, $\sigma_\delta'\sim\left(0, 1\right)$
+
+
+$$\gamma_i^{(1)}\sim N\left(\gamma_{i-1}^{(1)}, \sigma_\gamma^2\right)$$ 
+and
+$$\gamma_i^{(2)}\sim N\left(\gamma_{i-1}^{(2)}, \sigma_\gamma^2\right)$$ 
+
+where $\gamma_0^{(1)}=\log\left(0.1 \cdot m_0\right)$, $\gamma_0^{(2)}=\log\left(0.00015 \cdot m_0\right)$, and $\sigma_\gamma=\lvert\sigma_\gamma'\rvert$, $\sigma_\gamma'\sim (0, 1)$
+
+$$\phi_1\sim N\left(0, 1\right)\text{ and }\phi_2\sim N\left(0, 1\right)$$
+
+$u_i$ for $i=1,\ldots,5$ represent annual crude mortality rates among the respective population and $m_0$ is the general population size at time 0.
+
+Assumptions:
+
++  $r_0^{(1)}$ is approximately 10% of the population
++  $r_0^{(2)}$ is approximately 0.15 per thousand population
++  with a high level of uncertainty (weakly informative)
+
+## Results
+
+```{r include=FALSE}
+plot_names <- dir(black_path)
+diagnostic_plots <- plot_names[grepl("^00-diagnostics", plot_names)]
+wxy_plots <- plot_names[grepl("^02-.+[w|x|y].png", plot_names)][c(1, 3, 2)]
+p_plots <- plot_names[grepl("^02-.+p\\d.png", plot_names)]
+r_plots <- plot_names[grepl("^02-.+r\\d.png", plot_names)]
+init_logitp_plots <- plot_names[grepl("^01-.+logitp.png", plot_names)]
+sigma_plots <- plot_names[grepl("^01-.+sig.+.png", plot_names)]
+phi_plots <- plot_names[grepl("^01-.+phi\\d.png", plot_names)]
+```
+
+### Incidences
+
++  Curves on the left margin indicate prior distributions where available.
++  Connected solid diamonds indicate posterior medians with 80% and 95% credible intervals indicated with vertical lines.
+
+```{r}
+knitr::kable(
+  rbind(
+    `Non-Hispanic black` = render_images(black_path, r_plots),
+    `Non-Hispanic white` = render_images(white_path, r_plots)
+  ), 
+  col.names = c("r1", "r2"),
+  row.names = TRUE
+)
+```
+
+### Transition probabilities
+
++  Curves on the left margin indicate prior distributions where available.
++  Connected solid diamonds indicate posterior medians with 80% and 95% credible intervals indicated with vertical lines.
++  White diamonds indicate the ratio estimates.
+
+```{r}
+knitr::kable(
+  rbind(
+    `Non-Hispanic black` = render_images(black_path, p_plots),
+    `Non-Hispanic white` = render_images(white_path, p_plots)
+  ), 
+  col.names = c("p1", "p2", "p3"),
+  row.names = TRUE
+)
+```
+
+### Observed counts
+
++  Connected solid diamonds indicate posterior medians with 80% and 95% credible intervals indicated with vertical lines.
++  Crosses indicate the observed counts.
+
+```{r}
+knitr::kable(
+  rbind(
+    `Non-Hispanic black` = render_images(black_path, wxy_plots),
+    `Non-Hispanic white` = render_images(white_path, wxy_plots)
+  ), 
+  col.names = c("W", "Y", "X"),
+  row.names = TRUE
+)
+```
+
+### Hyperparameters
+
+### Initial prevalences
+
++  The values represent logit-transformed proportion of the general subpopulation.
+
+```{r}
+knitr::kable(
+  rbind(
+    `Non-Hispanic black` = render_images(black_path, init_logitp_plots),
+    `Non-Hispanic white` = render_images(white_path, init_logitp_plots)
+  ), 
+  col.names = c("State 1", "State 2"),
+  row.names = TRUE
+)
+```
+
+### Random walk standard deviations
+
+```{r}
+knitr::kable(
+  rbind(
+    `Non-Hispanic black` = render_images(black_path, sigma_plots),
+    `Non-Hispanic white` = render_images(white_path, sigma_plots)
+  ), 
+  col.names = c("$\\sigma_\\delta$", "$\\sigma_\\gamma$"),
+  row.names = TRUE, escape = FALSE
+)
+```
+
+### Bias adjustment terms
+
+```{r}
+knitr::kable(
+  rbind(
+    `Non-Hispanic black` = render_images(black_path, phi_plots),
+    `Non-Hispanic white` = render_images(white_path, phi_plots)
+  ), 
+  col.names = c("$\\phi_1$", "$\\phi_2$"),
+  row.names = TRUE, escape = FALSE
+)
+```
+
+## Diagnostic plots
+
+Several diagnostic plots are available in subdirectories for [the non-Hispanic black model](black/) and [the non-Hispanic white model](white/).

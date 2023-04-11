@@ -1,0 +1,10 @@
+.DS_Store
+.Rproj.user
+.Rhistory
+*.RData
+.Ruserdata
+logs
+mcdus
+nsduhus
+nohup.out
+*.rds

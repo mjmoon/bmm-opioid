@@ -1,0 +1,160 @@
+"Notes"	"Year"	"Year Code"	"Hispanic Origin"	"Hispanic Origin Code"	"Race"	"Race Code"	Deaths	Population	Crude Rate
+	"2014"	"2014"	"Hispanic or Latino"	"2135-2"	"American Indian or Alaska Native"	"1002-5"	748	1413541	52.9
+	"2014"	"2014"	"Hispanic or Latino"	"2135-2"	"Asian or Pacific Islander"	"A-PI"	815	704976	115.6
+	"2014"	"2014"	"Hispanic or Latino"	"2135-2"	"Black or African American"	"2054-5"	2980	2204046	135.2
+	"2014"	"2014"	"Hispanic or Latino"	"2135-2"	"White"	"2106-3"	158568	38792420	408.8
+"Total"	"2014"	"2014"	"Hispanic or Latino"	"2135-2"			163111	43114983	378.3
+	"2014"	"2014"	"Not Hispanic or Latino"	"2186-2"	"American Indian or Alaska Native"	"1002-5"	16693	2176524	767.0
+	"2014"	"2014"	"Not Hispanic or Latino"	"2186-2"	"Asian or Pacific Islander"	"A-PI"	59328	15688939	378.2
+	"2014"	"2014"	"Not Hispanic or Latino"	"2186-2"	"Black or African American"	"2054-5"	295441	33958403	870.0
+	"2014"	"2014"	"Not Hispanic or Latino"	"2186-2"	"White"	"2106-3"	2053020	175320868	1171.0
+"Total"	"2014"	"2014"	"Not Hispanic or Latino"	"2186-2"			2424482	227144734	1067.4
+	"2014"	"2014"	"Not Stated"	"NS"	"American Indian or Alaska Native"	"1002-5"	54	Not Applicable	Not Applicable
+	"2014"	"2014"	"Not Stated"	"NS"	"Asian or Pacific Islander"	"A-PI"	263	Not Applicable	Not Applicable
+	"2014"	"2014"	"Not Stated"	"NS"	"Black or African American"	"2054-5"	1687	Not Applicable	Not Applicable
+	"2014"	"2014"	"Not Stated"	"NS"	"White"	"2106-3"	6367	Not Applicable	Not Applicable
+"Total"	"2014"	"2014"	"Not Stated"	"NS"			8371	Not Applicable	Not Applicable
+"Total"	"2014"	"2014"					2595964	270259717	960.5
+	"2015"	"2015"	"Hispanic or Latino"	"2135-2"	"American Indian or Alaska Native"	"1002-5"	839	1446364	58.0
+	"2015"	"2015"	"Hispanic or Latino"	"2135-2"	"Asian or Pacific Islander"	"A-PI"	976	725548	134.5
+	"2015"	"2015"	"Hispanic or Latino"	"2135-2"	"Black or African American"	"2054-5"	2469	2280964	108.2
+	"2015"	"2015"	"Hispanic or Latino"	"2135-2"	"White"	"2106-3"	168878	39751183	424.8
+"Total"	"2015"	"2015"	"Hispanic or Latino"	"2135-2"			173162	44204059	391.7
+	"2015"	"2015"	"Not Hispanic or Latino"	"2186-2"	"American Indian or Alaska Native"	"1002-5"	17599	2199588	800.1
+	"2015"	"2015"	"Not Hispanic or Latino"	"2186-2"	"Asian or Pacific Islander"	"A-PI"	64097	16330991	392.5
+	"2015"	"2015"	"Not Hispanic or Latino"	"2186-2"	"Black or African American"	"2054-5"	306541	34385510	891.5
+	"2015"	"2015"	"Not Hispanic or Latino"	"2186-2"	"White"	"2106-3"	2109753	175652598	1201.1
+"Total"	"2015"	"2015"	"Not Hispanic or Latino"	"2186-2"			2497990	228568687	1092.9
+	"2015"	"2015"	"Not Stated"	"NS"	"American Indian or Alaska Native"	"1002-5"	55	Not Applicable	Not Applicable
+	"2015"	"2015"	"Not Stated"	"NS"	"Asian or Pacific Islander"	"A-PI"	326	Not Applicable	Not Applicable
+	"2015"	"2015"	"Not Stated"	"NS"	"Black or African American"	"2054-5"	1881	Not Applicable	Not Applicable
+	"2015"	"2015"	"Not Stated"	"NS"	"White"	"2106-3"	8351	Not Applicable	Not Applicable
+"Total"	"2015"	"2015"	"Not Stated"	"NS"			10613	Not Applicable	Not Applicable
+"Total"	"2015"	"2015"					2681765	272772746	983.1
+	"2016"	"2016"	"Hispanic or Latino"	"2135-2"	"American Indian or Alaska Native"	"1002-5"	942	1476200	63.8
+	"2016"	"2016"	"Hispanic or Latino"	"2135-2"	"Asian or Pacific Islander"	"A-PI"	1046	743699	140.6
+	"2016"	"2016"	"Hispanic or Latino"	"2135-2"	"Black or African American"	"2054-5"	2910	2347713	124.0
+	"2016"	"2016"	"Hispanic or Latino"	"2135-2"	"White"	"2106-3"	176938	40418569	437.8
+"Total"	"2016"	"2016"	"Hispanic or Latino"	"2135-2"			181836	44986181	404.2
+	"2016"	"2016"	"Not Hispanic or Latino"	"2186-2"	"American Indian or Alaska Native"	"1002-5"	18145	2222736	816.3
+	"2016"	"2016"	"Not Hispanic or Latino"	"2186-2"	"Asian or Pacific Islander"	"A-PI"	67002	16661167	402.1
+	"2016"	"2016"	"Not Hispanic or Latino"	"2186-2"	"Black or African American"	"2054-5"	318087	34731440	915.8
+	"2016"	"2016"	"Not Hispanic or Latino"	"2186-2"	"White"	"2106-3"	2119749	175893912	1205.1
+"Total"	"2016"	"2016"	"Not Hispanic or Latino"	"2186-2"			2522983	229509255	1099.3
+	"2016"	"2016"	"Not Stated"	"NS"	"American Indian or Alaska Native"	"1002-5"	114	Not Applicable	Not Applicable
+	"2016"	"2016"	"Not Stated"	"NS"	"Asian or Pacific Islander"	"A-PI"	264	Not Applicable	Not Applicable
+	"2016"	"2016"	"Not Stated"	"NS"	"Black or African American"	"2054-5"	1617	Not Applicable	Not Applicable
+	"2016"	"2016"	"Not Stated"	"NS"	"White"	"2106-3"	6630	Not Applicable	Not Applicable
+"Total"	"2016"	"2016"	"Not Stated"	"NS"			8625	Not Applicable	Not Applicable
+"Total"	"2016"	"2016"					2713444	274495436	988.5
+	"2017"	"2017"	"Hispanic or Latino"	"2135-2"	"American Indian or Alaska Native"	"1002-5"	1032	1517028	68.0
+	"2017"	"2017"	"Hispanic or Latino"	"2135-2"	"Asian or Pacific Islander"	"A-PI"	1120	764890	146.4
+	"2017"	"2017"	"Hispanic or Latino"	"2135-2"	"Black or African American"	"2054-5"	2829	2433057	116.3
+	"2017"	"2017"	"Hispanic or Latino"	"2135-2"	"White"	"2106-3"	185905	41653184	446.3
+"Total"	"2017"	"2017"	"Hispanic or Latino"	"2135-2"			190886	46368159	411.7
+	"2017"	"2017"	"Not Hispanic or Latino"	"2186-2"	"American Indian or Alaska Native"	"1002-5"	18789	2243570	837.5
+	"2017"	"2017"	"Not Hispanic or Latino"	"2186-2"	"Asian or Pacific Islander"	"A-PI"	71360	17336749	411.6
+	"2017"	"2017"	"Not Hispanic or Latino"	"2186-2"	"Black or African American"	"2054-5"	327102	35199837	929.3
+	"2017"	"2017"	"Not Hispanic or Latino"	"2186-2"	"White"	"2106-3"	2166982	175977884	1231.4
+"Total"	"2017"	"2017"	"Not Hispanic or Latino"	"2186-2"			2584233	230758040	1119.9
+	"2017"	"2017"	"Not Stated"	"NS"	"American Indian or Alaska Native"	"1002-5"	84	Not Applicable	Not Applicable
+	"2017"	"2017"	"Not Stated"	"NS"	"Asian or Pacific Islander"	"A-PI"	275	Not Applicable	Not Applicable
+	"2017"	"2017"	"Not Stated"	"NS"	"Black or African American"	"2054-5"	1695	Not Applicable	Not Applicable
+	"2017"	"2017"	"Not Stated"	"NS"	"White"	"2106-3"	6616	Not Applicable	Not Applicable
+"Total"	"2017"	"2017"	"Not Stated"	"NS"			8670	Not Applicable	Not Applicable
+"Total"	"2017"	"2017"					2783789	277126199	1004.5
+	"2018"	"2018"	"Hispanic or Latino"	"2135-2"	"American Indian or Alaska Native"	"1002-5"	1147	1550083	74.0
+	"2018"	"2018"	"Hispanic or Latino"	"2135-2"	"Asian or Pacific Islander"	"A-PI"	1191	784211	151.9
+	"2018"	"2018"	"Hispanic or Latino"	"2135-2"	"Black or African American"	"2054-5"	3491	2494387	140.0
+	"2018"	"2018"	"Hispanic or Latino"	"2135-2"	"White"	"2106-3"	192909	42452377	454.4
+"Total"	"2018"	"2018"	"Hispanic or Latino"	"2135-2"			198738	47281058	420.3
+	"2018"	"2018"	"Not Hispanic or Latino"	"2186-2"	"American Indian or Alaska Native"	"1002-5"	19090	2265155	842.8
+	"2018"	"2018"	"Not Hispanic or Latino"	"2186-2"	"Asian or Pacific Islander"	"A-PI"	74055	17689669	418.6
+	"2018"	"2018"	"Not Hispanic or Latino"	"2186-2"	"Black or African American"	"2054-5"	335185	35527830	943.4
+	"2018"	"2018"	"Not Hispanic or Latino"	"2186-2"	"White"	"2106-3"	2175727	176010721	1236.1
+"Total"	"2018"	"2018"	"Not Hispanic or Latino"	"2186-2"			2604057	231493375	1124.9
+	"2018"	"2018"	"Not Stated"	"NS"	"American Indian or Alaska Native"	"1002-5"	72	Not Applicable	Not Applicable
+	"2018"	"2018"	"Not Stated"	"NS"	"Asian or Pacific Islander"	"A-PI"	330	Not Applicable	Not Applicable
+	"2018"	"2018"	"Not Stated"	"NS"	"Black or African American"	"2054-5"	1462	Not Applicable	Not Applicable
+	"2018"	"2018"	"Not Stated"	"NS"	"White"	"2106-3"	5810	Not Applicable	Not Applicable
+"Total"	"2018"	"2018"	"Not Stated"	"NS"			7674	Not Applicable	Not Applicable
+"Total"	"2018"	"2018"					2810469	278774433	1008.2
+	"2019"	"2019"	"Hispanic or Latino"	"2135-2"	"American Indian or Alaska Native"	"1002-5"	1295	1581374	81.9
+	"2019"	"2019"	"Hispanic or Latino"	"2135-2"	"Asian or Pacific Islander"	"A-PI"	1270	804009	158.0
+	"2019"	"2019"	"Hispanic or Latino"	"2135-2"	"Black or African American"	"2054-5"	3799	2562697	148.2
+	"2019"	"2019"	"Hispanic or Latino"	"2135-2"	"White"	"2106-3"	199915	43152788	463.3
+"Total"	"2019"	"2019"	"Hispanic or Latino"	"2135-2"			206279	48100868	428.8
+	"2019"	"2019"	"Not Hispanic or Latino"	"2186-2"	"American Indian or Alaska Native"	"1002-5"	19299	2285417	844.4
+	"2019"	"2019"	"Not Hispanic or Latino"	"2186-2"	"Asian or Pacific Islander"	"A-PI"	76366	17945368	425.5
+	"2019"	"2019"	"Not Hispanic or Latino"	"2186-2"	"Black or African American"	"2054-5"	340556	35892555	948.8
+	"2019"	"2019"	"Not Hispanic or Latino"	"2186-2"	"White"	"2106-3"	2177587	175992536	1237.3
+"Total"	"2019"	"2019"	"Not Hispanic or Latino"	"2186-2"			2613808	232115876	1126.1
+	"2019"	"2019"	"Not Stated"	"NS"	"American Indian or Alaska Native"	"1002-5"	62	Not Applicable	Not Applicable
+	"2019"	"2019"	"Not Stated"	"NS"	"Asian or Pacific Islander"	"A-PI"	296	Not Applicable	Not Applicable
+	"2019"	"2019"	"Not Stated"	"NS"	"Black or African American"	"2054-5"	1311	Not Applicable	Not Applicable
+	"2019"	"2019"	"Not Stated"	"NS"	"White"	"2106-3"	4989	Not Applicable	Not Applicable
+"Total"	"2019"	"2019"	"Not Stated"	"NS"			6658	Not Applicable	Not Applicable
+"Total"	"2019"	"2019"					2826745	280216744	1008.8
+"Total"							16412176	1653645275	992.5
+"---"
+"Dataset: Multiple Cause of Death, 1999-2020"
+"Query Parameters:"
+"Single-Year Ages: 12 years; 13 years; 14 years; 15 years; 16 years; 17 years; 18 years; 19 years; 20 years; 21 years; 22 years;"
+"23 years; 24 years; 25 years; 26 years; 27 years; 28 years; 29 years; 30 years; 31 years; 32 years; 33 years; 34 years; 35"
+"years; 36 years; 37 years; 38 years; 39 years; 40 years; 41 years; 42 years; 43 years; 44 years; 45 years; 46 years; 47 years;"
+"48 years; 49 years; 50 years; 51 years; 52 years; 53 years; 54 years; 55 years; 56 years; 57 years; 58 years; 59 years; 60"
+"years; 61 years; 62 years; 63 years; 64 years; 65 years; 66 years; 67 years; 68 years; 69 years; 70 years; 71 years; 72 years;"
+"73 years; 74 years; 75 years; 76 years; 77 years; 78 years; 79 years; 80 years; 81 years; 82 years; 83 years; 84 years; 85"
+"years; 86 years; 87 years; 88 years; 89 years; 90 years; 91 years; 92 years; 93 years; 94 years; 95 years; 96 years; 97 years;"
+"98 years; 99 years; 100+ years"
+"Year/Month: 2014; 2015; 2016; 2017; 2018; 2019"
+"Group By: Year; Hispanic Origin; Race"
+"Show Totals: True"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/mcd.html for more information."
+"---"
+"Query Date: Mar 16, 2023 2:29:51 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Mortality 1999-2020 on CDC WONDER Online Database, released in 2021. Data are from the Multiple Cause of Death Files,"
+"1999-2020, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/mcd-icd10.html on Mar 16, 2023 2:29:51 AM"
+"---"
+Caveats:
+"1. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd.html#2014-Revision."
+"2. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd.html#Not Stated."
+"3. Deaths of persons with Hispanic origin ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among"
+"Hispanic Origin groups, so are not included in the Hispanic Origin specific counts and rates. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd.html#Not Stated."
+"4. Information included on the death certificate about the race and Hispanic ethnicity of the decedent is reported by the"
+"funeral director as provided by an informant, often the surviving next of kin, or, in the absence of an informant, on the basis"
+"of observation. Race and ethnicity information from the census is by self-report. To the extent that race and Hispanic origin"
+"are inconsistent between these two data sources, death rates will be biased. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd.html#Racial Differences."
+"5. The population figures for year 2020 are bridged-race estimates of the July 1 resident population, from the Vintage 2020"
+"postcensal series released by NCHS on September 22, 2021. The population figures for year 2019 are bridged-race estimates of the"
+"July 1 resident population, from the Vintage 2019 postcensal series released by NCHS on July 9, 2020. The population figures for"
+"year 2018 are bridged-race estimates of the July 1 resident population, from the Vintage 2018 postcensal series released by NCHS"
+"on June 25, 2019. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2017 postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The"
+"population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal"
+"series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are"
+"bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26,"
+"2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012"
+"postcensal series released by NCHS on June 13, 2013. Population figures for 2011 are bridged-race estimates of the July 1"
+"resident population, from the county-level postcensal Vintage 2011 series released by NCHS on July 18, 2012. Population figures"
+"for 2010 are April 1 Census counts. The population figures for years 2001 - 2009, are bridged-race estimates of the July 1"
+"resident population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012."
+"Population figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of"
+"July 1 estimates. Population figures for Infant Age Groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."

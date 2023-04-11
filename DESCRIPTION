@@ -1,0 +1,24 @@
+Type: project
+Title: Bayesian Multistate Modeling of the Opioid Crisis
+Description: The project aims to provide a theoretical 
+    framework for estimating the transition probabilities 
+    between different stages of opioid use.
+Remotes:
+	mjmoon/nsduhus,
+	mjmoon/mcdus
+Depends:
+	devtools,
+	markdown,
+	pander,
+	rsvg,
+	dplyr,
+	tidyr,
+	tibble,
+	svglite,
+	ggplot2,
+	nsduhus,
+	mcdus,
+	bayesplot,
+	rstan
+	
+

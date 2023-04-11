@@ -1,0 +1,25 @@
+log_file <- file("logs/download-us-data-.log", open = "a")
+sink(log_file, type = "message")
+timestamp <- format(Sys.time(), format = "%Y-%m-%d %H:%M")
+message(paste0("----------", timestamp, "----------"))
+if (!require(mcdus))
+  devtools::install_github("mjmoon/mcdus")
+if (!require(nsduhus))
+  devtools::install_github("mjmoon/nsduhus")
+library(mcdus)
+library(nsduhus)
+library(dplyr)
+# download and parse Multiple Causes of Death data -----------------------------
+download_mcdus_zip(as.character(2015:2020))
+uncompress_mcdus_zip(save_to_wd = TRUE)
+# download and parse National Survey on Drug Use Health ------------------------
+download_nsduhus_zip(as.character(2015:2020))
+uncompress_nsduhus_zip(save_to_wd = TRUE)
+# inspect data specifications
+# open_nsduhus_codebook("2019")
+# open_nsduhus_codebook("2003")
+sink(NULL, type = "message")
+message(paste0("----------", timestamp, "----------"))
+message(paste0("------------------------------------"))
+rm(list = ls())
+
