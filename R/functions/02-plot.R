@@ -89,6 +89,7 @@ get_post_intervals <- function(
 #'     + `mean`: mean of prior.
 #'     + `sigma_sigma`: sigma of the standard deviaiton of the prior.
 #' @param both_races (optional) Plot both race if `TRUE`.
+#' @param cis (optional) Credible intervals probabilities.
 #' @param obs (optional) Whether the plot should include observed values.
 #' @param obs_shape (optional) Point shape for observed values. required 
 #'     when `obs` is `TRUE`.
@@ -106,6 +107,10 @@ get_post_intervals <- function(
 #'     + `non-hispanic black`
 #'     + `non-hispanic white`
 #'     + `prior`
+#' @param sgaoes (optional) A named vector specifying the shapes for markers. 
+#'     Required items:
+#'     + `non-hispanic black`
+#'     + `non-hispanic white`
 #' @param plt_theme (optional) A `ggplot` theme object.
 #' @param file (optional) File path to save the plot.
 #' @param save (optional) If `FALSE`, the file is not saved and the function 
@@ -113,7 +118,8 @@ get_post_intervals <- function(
 #' @param device (optional) Device for saving the plot file.
 #' @return A `ggplot` object if `save` is `FALSE`.
 plot_posterior_over_time <- function(
-    post, prior = NULL, both_races = TRUE,
+    post, prior = NULL, both_races = TRUE, cis = c(80, 95),
+    est_size = 5,
     obs = FALSE, obs_shape = NULL, obs_size = 1.5, 
     title = NULL, subtitle = NULL, ylab = NULL, 
     ytrans = "identity", ylimits = NULL, ybreaks = waiver(), 
@@ -121,15 +127,18 @@ plot_posterior_over_time <- function(
     colors = c(`non-hispanic black` = "#00A189", 
                `non-hispanic white` = "#F1C500",
                `prior` = "#404040"), 
+    shapes = c(`non-hispanic black` = 18, 
+               `non-hispanic white` = 18), 
     plt_theme = theme_minimal(),
     file = NULL, save = TRUE, device = "png") {
   if (both_races) {
     plt <- ggplot(
       post, 
-      aes(y = year + ifelse(race == "non-hispanic black", -.1, .1), 
-          colour = race)
+      aes(y = year + ifelse(tolower(race) == "non-hispanic black", -.1, .1), 
+          colour = race, shape = race)
     ) +
-      scale_colour_manual(values = colors, aesthetics = list("color", "fill"))
+      scale_colour_manual(values = colors, aesthetics = list("color", "fill")) +
+      scale_shape_manual(values = shapes)
   } else {
     plt <- ggplot(post, aes(y = year))
   }
@@ -157,12 +166,18 @@ plot_posterior_over_time <- function(
     }
   }
   
+  if (95 %in% cis) {
+    plt <- plt +
+      geom_linerange(aes(xmin = `2.5%`, xmax = `97.5%`), 
+                     linewidth = 1)
+  }
+  if (80 %in% cis) {
+    plt <- plt +
+      geom_linerange(aes(xmin = `10%`, xmax = `90%`), 
+                     linewidth = 2) 
+  }
   plt <- plt +
-    geom_linerange(aes(xmin = `2.5%`, xmax = `97.5%`), 
-                   linewidth = 1) +
-    geom_linerange(aes(xmin = `10%`, xmax = `90%`), 
-                   linewidth = 2) +
-    geom_point(aes(x = `50%`), size = 5, shape = 18) +
+    geom_point(aes(x = `50%`), size = est_size) +
     geom_path(aes(x = `50%`), linewidth = 1.2, linetype = "dotted")
   
   if (obs) {

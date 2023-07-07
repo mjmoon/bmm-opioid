@@ -1,5 +1,5 @@
 
-*Updated: 2023-04-11.*
+*Updated: 2023-07-07.*
 
 ## Bayesian Multistate Modelling of the Opioid Crisis
 
@@ -41,6 +41,7 @@ You can find the resulting plots in the following directories:
 - [Simulation](results/sim)
 - [US case study](results/us)
 - [PAA 2023 poster](results/paa-poster)
+- [Manuscript](results/man)
 
 ------------------------------------------------------------------------
 

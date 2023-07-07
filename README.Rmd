@@ -36,6 +36,7 @@ You can find the resulting plots in the following directories:
 +  [Simulation](results/sim)
 +  [US case study](results/us)
 +  [PAA 2023 poster](results/paa-poster)
++  [Manuscript](results/man)
 
 ------------
 ### Authors 

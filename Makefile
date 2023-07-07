@@ -20,9 +20,11 @@ plot-sim:
 	$(MAKE) SCRIPT="sim/04-01-posterior-without-ratio-estimates.R" rscript
 	$(MAKE) SCRIPT="sim/03-02-diagnostics-with-ratio-estimates.R" rscript
 	$(MAKE) SCRIPT="sim/04-02-posterior-with-ratio-estimates.R" rscript
-# analyse-prior-sensitivity-sim:
-# 	$(MAKE) SCRIPT="sim/05-01-fit-prior-sensitivity.R" rscript
-# 	$(MAKE) SCRIPT="sim/05-02-plot-prior-sensitivity.R" rscript
+fit-sa:
+	$(MAKE) SCRIPT="sim/02-03-fit-sensitivity-analysis.R" rscript
+plot-sa:
+	$(MAKE) SCRIPT="sim/03-03-diagnostics-sensitivity-analysis.R" rscript
+	$(MAKE) SCRIPT="sim/04-03-posterior-sensitivity-analysis.R" rscript
 
 
 # us case study ---------
@@ -48,6 +50,9 @@ plot-us:
 # publications and presentations ---------------------
 plot-paa:
 	$(MAKE) SCRIPT="03-paa-poster.R" rscript
+plot-manu:
+	$(MAKE) SCRIPT="01-man-sims.R" rscript
+	$(MAKE) SCRIPT="02-man-us.R" rscript
 
 # knit -----------
 knit-readmes:
